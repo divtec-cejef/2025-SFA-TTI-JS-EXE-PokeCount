@@ -58,6 +58,6 @@ function sauvegarder() {
 
 // Attendre que la page soit chargée pour exécuter le code
 window.addEventListener("load", () => {
-  // Charger les captures sauvegardées ou une chaîne vide
+  // Charger les captures sauvegardées dans localStorage ou une chaîne vide
   sauvegardeEl.textContent = localStorage.getItem("captures") || "";
 });
