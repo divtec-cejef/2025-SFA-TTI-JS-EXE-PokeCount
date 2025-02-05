@@ -13,7 +13,7 @@ const compteurEl = document.getElementById("compteur-el");
 const capturerBtn = document.getElementById("capturer-btn");
 const sauvegarderBtn = document.getElementById("sauvegarder-btn");
 const resetBtn = document.getElementById("reset-btn");
-// console.log(sauvegardeEl, compteurEl, capturerBtn, resetBtn);
+console.log(resetBtn);
 
 // Gestion des événements
 capturerBtn.addEventListener("click", capturer);
@@ -59,6 +59,12 @@ function sauvegarder() {
   compteurEl.textContent = compteur;
 }
 
+/**
+ * Fonction qui :
+ *  * Réinitialise le compteur à 0
+ *  * Réinitialise les sauvegardes
+ *  * Supprime les captures du localStorage
+ */
 function reset() {
   // Reset du compteur
   compteur = 0;
