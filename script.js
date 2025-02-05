@@ -12,10 +12,13 @@ const sauvegardeEl = document.getElementById("sauvegarde-el");
 const compteurEl = document.getElementById("compteur-el");
 const capturerBtn = document.getElementById("capturer-btn");
 const sauvegarderBtn = document.getElementById("sauvegarder-btn");
+const resetBtn = document.getElementById("reset-btn");
+// console.log(sauvegardeEl, compteurEl, capturerBtn, resetBtn);
 
 // Gestion des événements
 capturerBtn.addEventListener("click", capturer);
 sauvegarderBtn.addEventListener("click", sauvegarder);
+resetBtn.addEventListener("click", reset);
 
 // Initialisation du compteur
 let compteur = 0;
@@ -54,6 +57,17 @@ function sauvegarder() {
   localStorage.setItem("captures", sauvegardeEl.textContent); // Sauvegarder les captures dans le localStorage
   compteur = 0;
   compteurEl.textContent = compteur;
+}
+
+function reset() {
+  // Reset du compteur
+  compteur = 0;
+  compteurEl.textContent = compteur;
+  compteurEl.style.color = "black"; // Remettre la couleur du texte en noir
+  // Reset des sauvegardes
+  sauvegardeEl.textContent = "";
+  // Reset du localStorage
+  localStorage.removeItem("captures");
 }
 
 // Attendre que la page soit chargée pour exécuter le code
