@@ -52,9 +52,9 @@ function capturer() {
  *
  */
 function sauvegarder() {
-  let compteurStr = compteur + " Pokémons - ";
-  sauvegardeEl.textContent += compteurStr; // Ajouter la valeur actuelle du compteur
-  localStorage.setItem("captures", sauvegardeEl.textContent); // Sauvegarder les captures dans le localStorage
+  let compteurStr = `<li>${compteur} Pokémons</li>`;
+  sauvegardeEl.innerHTML += compteurStr; // Ajouter la valeur actuelle du compteur
+  localStorage.setItem("captures", sauvegardeEl.innerHTML); // Sauvegarder les captures dans le localStorage
   compteur = 0;
   compteurEl.textContent = compteur;
 }
@@ -79,5 +79,5 @@ function reset() {
 // Attendre que la page soit chargée pour exécuter le code
 window.addEventListener("load", () => {
   // Charger les captures sauvegardées dans localStorage ou une chaîne vide
-  sauvegardeEl.textContent = localStorage.getItem("captures") || "";
+  sauvegardeEl.innerHTML = localStorage.getItem("captures") || "";
 });
