@@ -31,9 +31,13 @@ button {
 }
 
 #capturer-btn {
-    background: #EE1C24;
+    background: #da1b0d;
 }
 
 #sauvegarder-btn {
-    background: #7AC74C;
+    background: #7cc76c;
+}
+
+#reset-btn {
+    background: #9e225d;
 }

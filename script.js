@@ -8,8 +8,8 @@
 "use strict";
 
 // Récupération des éléments HTML
-let sauvegardeEl = document.getElementById("sauvegarde-el");
-let compteurEl = document.getElementById("compteur-el");
+const sauvegardeEl = document.getElementById("sauvegarde-el");
+const compteurEl = document.getElementById("compteur-el");
 const capturerBtn = document.getElementById("capturer-btn");
 const sauvegarderBtn = document.getElementById("sauvegarder-btn");
 
@@ -18,7 +18,7 @@ capturerBtn.addEventListener("click", capturer);
 sauvegarderBtn.addEventListener("click", sauvegarder);
 
 // Initialisation du compteur
-let compteur = 0
+let compteur = 0;
 
 /**
  * Fonction qui :
