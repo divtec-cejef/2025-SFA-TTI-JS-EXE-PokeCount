@@ -46,7 +46,7 @@ function capturer() {
 
 /**
  * Fonction qui :
- *  * Ajoute la dernière capture au texte de sauvegarde
+ *  * Ajoute la dernière capture à l'historique des captures
  *  * réinitialise le compteur à 0
  *  * met à jour le compteur dans le HTML
  *
