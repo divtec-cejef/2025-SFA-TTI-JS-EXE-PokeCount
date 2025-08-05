@@ -85,10 +85,6 @@ button:active {
     background: #7cc76c;
 }
 
-#reset-btn {
-    background: #2f2f2f;
-}
-
 #sauvegarde-el {
     max-width: 200px;
     margin: 0 auto;
